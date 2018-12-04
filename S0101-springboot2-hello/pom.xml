@@ -20,8 +20,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- 加入 devtools 热部署 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
-	<!-- 打包成可执行的 jar -->
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -30,5 +36,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

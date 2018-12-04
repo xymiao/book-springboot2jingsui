@@ -18,4 +18,10 @@ public class HelloSpringBootApplication {
 		String  sayHi = "Hello Spring Boot !!!";
 		return sayHi;
 	}
+	
+	@RequestMapping("helloChange")
+	public String helloSpringBootChange() {
+		String  sayHi = "Hello Spring Boot Change !!!";
+		return sayHi;
+	}
 }
