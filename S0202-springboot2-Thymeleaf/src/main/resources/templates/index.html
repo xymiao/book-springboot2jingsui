@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>Thymeleaf模版演示</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+<style type="text/css">
+body {
+	padding: 0;
+	margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+
+	<th:block th:include="common :: header"></th:block>
+
+	<p th:text="${home.title}">变量占位符</p>
+	<p th:text="${home.homeDesc}">变量占位符</p>
+	表达式的用法:
+	<br /> 变量表达式：$ {...}
+	<br />选择变量表达式：* {...}
+	<br />消息表达式：＃{...}
+	<br />链接网址表达式：@ {...}
+	<br />片段表达式：〜{...}
+	<p th:if="${home != null}">home数据存在我才显示</p>
+	<p th:if="${home2 == null}">home2数据不存在我才显示</p>
+
+	<div>
+		<span th:each="v : ${list}" th:text="${v}"> </span>
+	</div>
+
+</body>
+
+</html>
