@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>Thymeleaf模版演示</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+<style type="text/css">
+body {
+	padding: 0;
+	margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+	<th:block th:include="common :: header"></th:block>
+	
+	<p th:text="${home.times}">变量占位符</p>
+	<p th:text="${home.title}">变量占位符</p>
+	<p th:text="${home.homeDesc}">变量占位符</p>
+	
+	<p>User getUser(4)</p>
+	<p> <th:block th:text="${user.id}"/> &nbsp;&nbsp;
+	<th:block th:text="${user.name}"/> &nbsp;&nbsp;
+	<th:block th:text="${user.did}"/> &nbsp;&nbsp;
+	<th:block th:text="${user.createdate}"/></p>
+	
+	<p>User findAll</p>
+	<p>
+	<ul th:each="u:${list}">
+	<li th:text="${u.id}"></li>
+	<li th:text="${u.name}"></li>
+	<li th:text="${u.createdate}"></li>
+	<li th:text="${u.did}"></li>
+	</ul>
+	</p>
+</body>
+
+</html>

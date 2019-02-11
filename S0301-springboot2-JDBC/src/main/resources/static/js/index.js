@@ -1,0 +1,1 @@
+console.log("jkyuntu:提醒你, 你现在加载了js文件!");
